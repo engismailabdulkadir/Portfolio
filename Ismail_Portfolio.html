@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ismail Abdulkadir | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-logo">Ismail</a>
+      <ul class="nav-menu">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero container">
+    <div class="hero-text">
+      <h1>Hi, I'm <span>Ismail Abdulkadir</span></h1>
+      <p>A passionate Web Developer & Computer Science student.</p>
+      <div class="buttons">
+        <a href="#contact" class="btn">Hire Me</a>
+        
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="my.png" alt="Ismail Abdulkadir" />
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about container">
+    <h2>About Me</h2>
+    <p>
+      I am a Computer Science student with a passion for web development, coding, and solving problems.  
+      I enjoy creating clean and responsive websites that help businesses and individuals present their ideas online.
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills container">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div class="skill">
+        <h3>HTML</h3>
+        <div class="skill-bar">
+          <div class="skill-level html"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <h3>CSS</h3>
+        <div class="skill-bar">
+          <div class="skill-level css"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <h3>JavaScript</h3>
+        <div class="skill-bar">
+          <div class="skill-level js"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <h3>React</h3>
+        <div class="skill-bar">
+          <div class="skill-level react"></div>
+        </div>
+      </div>
+    </div>
+
+      <div class="github-link">
+      <a href="https://github.com/engismailabdulkadir" target="_blank" rel="noopener" class="btn btn-outline github-btn">
+        <svg height="20" width="20" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" style="margin-right:8px; vertical-align:middle;">
+          <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+            0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01
+            1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95
+            0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.11 0 0 .67-.21 2.2.82a7.65 7.65 0 012 0c1.53-1.04 2.2-.82 2.2-.82
+            .44 1.1.16 1.91.08 2.11.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01
+            1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+        </svg>
+        GitHub Profile
+      </a>
+    </div>
+  </section>
+
+ 
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact container">
+    <h2>Contact Me</h2>
+    <form action="#" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn btn-submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Ismail Abdulkadir. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Responsive hamburger toggle menu
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('nav-menu-active');
+      hamburger.classList.toggle('active');
+    });
+
+    // Close menu on link click (for mobile)
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('nav-menu-active');
+        hamburger.classList.remove('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
